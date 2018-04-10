@@ -27,6 +27,9 @@ def validate():
         password_error = 'Enter a valid Password'
         password = ''
     
+    if ver_password == '' or len(ver_password) < 3 or len(ver_password) > 20 or ' ' in ver_password:
+        ver_password_error = 'Enter a valid Password'
+        ver_password = ''
 
     if ver_password != password:
         ver_password_error = 'Passwords do not match'
